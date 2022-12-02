@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#F6F5F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/name"
+            android:text="Nama"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:layout_marginLeft="20dp"
+            />
+                <EditText
+                    android:id="@+id/inputName"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:paddingLeft="22dp"
+                    android:background="@drawable/rounded_text"
+                    android:layout_width="260dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="70dp"
+                    />
+
+
+        <TextView
+            android:text="Kelas"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:layout_alignTop="@id/inputName"
+            android:layout_alignLeft="@id/name"
+            />
+                <EditText
+                    android:id="@+id/inputKelas"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:paddingLeft="22dp"
+                    android:background="@drawable/rounded_text"
+                    android:layout_width="260dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_alignTop="@id/inputName"
+                    android:layout_marginLeft="70dp"
+                    />
+
+        <Button
+            android:id="@+id/btnKirim"
+            android:text="@string/nameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputKelas"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <TextView
+            android:text="Data Siswa"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnKirim"
+            android:layout_marginTop="20dp"
+            />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*"
+            android:layout_marginTop="50dp"
+            android:gravity="center_vertical">
+
+            <TableRow
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_table"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/titleSiswa"
+                    android:layout_gravity="center_vertical"
+                    android:text="Nama Siswa"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/titileNISN"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:text="NISN Siswa"
+                    android:paddingRight="39dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+            </TableRow>
+
+            <TableRow
+                android:background="@drawable/rounded_table"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:id="@+id/text_namaSiswa"
+                    android:hint=""
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="14dp"
+                    android:paddingLeft="8dp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/text_numberNISN"
+                    android:hint="-"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="14dp"
+                    android:paddingRight="39dp"
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    />
+            </TableRow>
+       </TableLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
